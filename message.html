@@ -14,14 +14,18 @@
             text-align: center;
             font-family: Arial, sans-serif;
             padding: 20px;
+            margin: 0;
         }
         .message-box {
             background: white;
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            max-width: 500px;
+            max-width: 90%;
+            width: 500px;
             animation: fadeIn 1s ease-in;
+            overflow-y: auto;
+            max-height: 80vh;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: scale(0.9); }
