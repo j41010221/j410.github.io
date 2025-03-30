@@ -38,13 +38,35 @@
         audio {
             display: none;
         }
+        .play-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="https://j41010221.github.io/j410.github.io/audio/Ben&Ben - Araw-Araw.mp3" type="audio/mp3">
+    <audio id="bg-music" loop>
+        <source src="https://j41010221.github.io/j410.github.io/audio/Ben&Ben%20-%20Araw-Araw.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
+    
+    <button class="play-button" onclick="document.getElementById('bg-music').play()">Play Music</button>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var audio = document.getElementById("bg-music");
+            audio.play().catch(error => {
+                console.log("Autoplay blocked. User interaction required.");
+            });
+        });
+    </script>
+    
     <div class="message-box">
         <h2>For You ❤️</h2>
         <p>Hey [Crush’s Name],</p>
