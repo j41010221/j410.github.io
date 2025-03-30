@@ -35,8 +35,18 @@
             color: red;
             font-size: 40px;
         }
-        audio {
-            display: none;
+        .music-button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .music-button:hover {
+            background-color: #e04360;
         }
     </style>
 </head>
@@ -46,12 +56,7 @@
         Your browser does not support the audio element.
     </audio>
     
-    <script>
-        document.addEventListener("click", function () {
-            var audio = document.getElementById("bg-music");
-            audio.play();
-        }, { once: true });
-    </script>
+    <button class="music-button" onclick="document.getElementById('bg-music').play()">Play Music</button>
     
     <div class="message-box">
         <h2>For You ❤️</h2>
