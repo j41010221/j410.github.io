@@ -24,12 +24,14 @@
         .heart {
             color: red;
             font-size: 50px;
-            animation: heartbeat 1s infinite alternate;
+            animation: heartbeat 1s infinite;
             cursor: pointer;
+            display: inline-block;
         }
         @keyframes heartbeat {
-            from { transform: scale(1); }
-            to { transform: scale(1.2); }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
     </style>
     <script>
@@ -43,8 +45,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Hey, I have something to tell you...</h1>
-        <p>Click the heart to see my message!</p>
+        <h1>Click Me</h1>
         <span class="heart" onclick="showMessage()">❤</span>
     </div>
 </body>
